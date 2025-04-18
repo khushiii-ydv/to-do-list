@@ -4,7 +4,7 @@ using namespace std;
 
 void print_tasks(string tasks[], int task_count)
 {
-    cout<<"Taska To Do :" <<endl;
+    cout<<"Tasks To Do :" <<endl;
     cout<<"-------------------------------------------"<< endl;
     for(int i=0;i<task_count;i++)
     {
@@ -37,7 +37,7 @@ int main()
         {
             case 1:
             {
-                if (task_count > 9)
+                if (task_count >= 10)
                 {
                     cout<<" ``` TASK LISE IS FULL"<< endl;
                 }
@@ -52,7 +52,11 @@ int main()
             case 2:
             {
                 system("cls");
-                print_tasks(tasks,task_count);
+                if(task_count == 0) {
+                    cout << "No tasks to show yet!" << endl;
+                } else {
+                    print_tasks(tasks, task_count);
+                }
                 break;
             }
             case 3:
